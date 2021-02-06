@@ -1,0 +1,64 @@
+\documentclass{homeworg}
+
+\title{Taller 1 
+\\Probabilidad y estadística}
+\author{Juan Manuel Dávila, Ana María Garzón, Luna Gutiérrez}
+\date{Febrero 5, 2021}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{Ejercicio 4}
+Usted entra a un torneo de ajedrez en el que debe jugar contra 3 oponentes. Aunque los oponentes están fijos, usted puede escoger el orden en que los enfrenta. De experiencias anteriores, usted sabe cuál es la probabilidad de derrotar a cada uno de los oponentes. Usted gana el torneo si logra derrotar a dos oponentes de forma consecutiva. Si usted quiere maximizar la probabilidad de ganar el torneo, muestre que la estrategia óptima es jugar contra el oponente más débil en el segundo partido, y que el orden en que juegue contra los otros dos no importa.
+
+\subsection*{Solución ejercicio 4}
+
+
+
+\bigskip\bigskip
+
+\subsection*{Ejercicio 5}
+Utilice los axiomas de probabilidad para demostrar que, para dos eventos A y B,
+\[P((A \cap B^\complement) \cup (A^\complement \cap B)) = P(A) + P(B) - 2P(A \cap B);\]
+que es la probabilidad de que exactamente uno de los eventos A o B ocurra.
+
+\subsection*{Solución ejercicio 5}
+
+Sean A y B dos eventos arbitrarios, note que
+
+\[P(A) = P(A \cap B) + P(A \cap B^\complement)\]
+\[P(B) = P(A \cap B) + P(A^\complement \cap B)\]
+
+Teniendo en cuenta lo anterior
+
+\[P(A) + P(B) - 2P(A \cap B) = P(A \cap B) + P(A \cap B^\complement) + P(A \cap B) + P(A^\complement \cap B)\ - 2P(A \cap B)\]
+
+Luego, al operar el lado derecho de la igualdad, se tiene que
+
+\[P(A) + P(B) - 2P(A \cap B) = P(A \cap B^\complement) + P(A^\complement \cap B)\]
+
+Note que $(A \cap B^\complement)$ y $(A^\complement \cap B)$ son eventos disjuntos, pues la intersección entre ellos es $\emptyset$.
+
+Entonces, por axioma de aditividad, se tiene que la suma de sus probabilidades es igual a la probabilidad de la unión de los dos conjuntos:
+
+\[P(A \cap B^\complement) + P(A^\complement \cap B) = P((A \cap B^\complement) \cup (A^\complement \cap B))\]
+
+Con lo que obtenemos que:
+
+\[P(A) + P(B) - 2P(A \cap B) = P((A \cap B^\complement) \cup (A^\complement \cap B))\]
+
+Que es la probabilidad de que exactamente uno de los eventos A o B ocurra, porque si 
+
+\[x \in A \cup B ; x \neq \emptyset \]
+
+Dado que el conjunto $C = \{(A \cap B^\complement), (A^\complement \cap B), (A \cap B)\}$ es una partición de $A \cup B$, como esto implica que la intersección entre sus elementos es $\emptyset$
+
+\[x \in ( (A \cap B^\complement) \cup (A^\complement \cap B) ) \iff x \notin A \cap B \]
+
+
+
+
+\setlength\parindent{400pt}\scalebox{0.8}{$\square$}
+
+\end{document}
